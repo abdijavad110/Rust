@@ -1,6 +1,5 @@
 // https://benchmarksgame-team.pages.debian.net/benchmarksgame/program/binarytrees-rust-5.html
-extern crate test;
-use test::Bencher;
+use super::*;
 
 extern crate bumpalo;
 extern crate rayon;
@@ -88,9 +87,9 @@ mod benches {
     use super::*;
 
     #[bench]
-    fn small(b: &mut Bencher) { b.iter(|| { run(7) }); }
+    fn small(b: &mut Bencher) { b.iter(|| { run(S_N) }); }
     #[bench]
-    fn medium(b: &mut Bencher) { b.iter(|| { run(14) }); }
+    fn medium(b: &mut Bencher) { b.iter(|| { run(M_N) }); }
     #[bench]
-    fn large(b: &mut Bencher) { b.iter(|| { run(21) }); }
+    fn large(b: &mut Bencher) { b.iter(|| { run(L_N) }); }
 }

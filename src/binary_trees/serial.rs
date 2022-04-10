@@ -1,7 +1,6 @@
 // https://benchmarksgame-team.pages.debian.net/benchmarksgame/program/binarytrees-rust-1.html
 // multi threading is removed here.
-extern crate test;
-use test::Bencher;
+use super::*;
 
 extern crate typed_arena;
 
@@ -74,9 +73,9 @@ mod benches {
     use super::*;
 
     #[bench]
-    fn small(b: &mut Bencher) { b.iter(|| { run(7) }); }
+    fn small(b: &mut Bencher) { b.iter(|| { run(S_N) }); }
     #[bench]
-    fn medium(b: &mut Bencher) { b.iter(|| { run(14) }); }
+    fn medium(b: &mut Bencher) { b.iter(|| { run(M_N) }); }
     #[bench]
-    fn large(b: &mut Bencher) { b.iter(|| { run(21) }); }
+    fn large(b: &mut Bencher) { b.iter(|| { run(L_N) }); }
 }
