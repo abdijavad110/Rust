@@ -2,8 +2,9 @@ extern crate test;
 use test::Bencher;
 
 mod conf;
-pub mod serial;
-pub mod rayon;
+mod tree;
+
+pub mod tester;
 
 
 use conf::{S_N, M_N, L_N};
