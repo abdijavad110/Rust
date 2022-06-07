@@ -3,6 +3,7 @@ use test::Bencher;
 
 mod conf;
 mod tree;
+mod csr;
 
 pub mod tester;
 
